@@ -17,7 +17,7 @@ process.stdin.on('readable', function() {
             console.log(process.env);
             break;
             default:
-            process.stdout.write('Wrong instruction!\n');
+            process.stderr.write('Wrong instruction!');
         }
     }
 });
