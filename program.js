@@ -7,17 +7,17 @@ process.stdin.on('readable', function() {
         var instruction = input.toString().trim();
         switch(instruction) {
             case '/exit': 
-            process.stdout.write('Quitting app!\n');
-            process.exit();
-            break;
+                process.stdout.write('Quitting app!\n');
+                process.exit();
+                break;
             case '/node_version':
-            console.log(process.versions);
-            break;
+                console.log(process.versions.node);
+                break;
             case '/node_language':
-            console.log(process.env);
-            break;
+                console.log(process.env.LANG);
+                break;
             default:
-            process.stderr.write('Wrong instruction!');
+                process.stderr.write('Wrong instruction!');
         }
     }
 });
